@@ -1,0 +1,116 @@
+/* 상단 네비바 꾸밈 ----------------------------------------------------------------*/
+
+/* 네비바 css */
+    /* 네비바 여백 추가 */
+        .navbar {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        /* 로고 정중앙 배치 */
+        .navbar-brand {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 요소 간격 일정하게 */
+        .navbar .navbar-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+          
+
+        /* 메뉴 클릭 시 밑줄 표시되면서 움직이게 */
+        .navbar .nav-link:hover {
+            border-bottom: 2px solid #4f3f31;
+            padding-bottom: 3px;
+            
+            
+        }
+
+        /* 요소 꾸밈 */
+        .navbar .nav-link {
+            font-size: 1rem;
+            padding: 1rem;
+        }
+
+        /* 제목과 양옆 꾸밈 */
+        .title-box {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            margin: 30px 0;
+            top: 80px;
+            padding-top: 3px;
+        }
+
+        .title-box::before,
+        .title-box::after {
+            content: "";
+            position: absolute;
+            top: 48px;
+            width: 39%;
+            height: 2px;
+            background-color: #4f3f31;
+        }
+
+        .title-box::before {
+            left: 0;
+        }
+
+        .title-box::after {
+            right: 0;
+        }
+
+        /* 본문 내용 스크롤 시 네비바 가리기 */
+        .mainhome {
+            margin-top: 160px;
+            margin-right: 0px;
+            padding: 20px 0px 0px 0px;
+            height: calc(100vh - 160px);
+            overflow-y: auto;
+        }
+
+/* 본문 구역 꾸밈--------------------------------------------------------------- */
+        /* 너비 설정 */
+        .main-content {
+            padding-left: 2%; padding-right: 2%;
+            transform: translateX(-4px);}
+
+        /* 스크롤바 숨기기*/
+        .mainhome::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+
+        /* 글자 단어단위로 줄바꿈 */
+        .main-content {
+            word-wrap: break-word; 
+            overflow-wrap: break-word; 
+            word-break: keep-all;}
+
+        /* mainfirst */
+        .mainfirst {background-image:linear-gradient( #0000006a, #00000016), url(images/랑이님.jpg);
+        background-size:100%;
+        background-position-y: center, top;}
+        
+/* 최하단 안내구역 꾸밈---------------------------------------------------------- */
+        /* 배경 영역 */
+        .main-under {background-color: burlywood;
+        width: 100%;
+        position: relative;
+        }
+
+        /* 글씨 크기 font-weight: bold; */
+        .main-under {font-size: small;
+        color:#4f3f31; 
+        }
+
+        .link-bottom-c{color:#4f3f31;
+        text-decoration: none;}
+
+        
+        
+
