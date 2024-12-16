@@ -1,0 +1,226 @@
+
+/* 본문 글씨체 학교안심 우주 */
+body {
+    font-family: "IBM Plex Sans KR", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+
+/* 본문 전체---------------------------------*/
+body{margin-top: 86px !important;}
+
+/* 전체 스크롤바 꾸밈 */
+body {overflow-x: hidden;}
+body::-webkit-scrollbar {
+    
+    width: 20px;
+    }
+
+
+body::-webkit-scrollbar-track {
+    background: #f7f6f4;
+    border-radius: 0px;
+    height: 2px;
+    }
+
+body::-webkit-scrollbar-thumb {
+    background: #5739164c;
+    border-radius: 0px;
+    }
+
+      /*네비바 서치버튼색*/
+  .nbSearch {color:#4f3f31;
+    border-color: #4f3f31;}
+
+  /*네비바 서치버튼색 - hover*/
+  .nbSearch:hover {color:bisque;
+    background-color: #4f3f31;
+    border-color: #4f3f31;}
+    
+  /*네비바 서치버튼색 - active*/
+  .nbSearch:active {color:bisque !important;
+    background-color: #4f3f31 !important;
+    border-color: #4f3f31 !important;}
+
+
+    /* 활성화 색*/
+    .activenb {
+        color: #000000; 
+        font-weight: bold;
+      }
+
+/* 미니네비-------------------------------------------*/
+
+    .nbcatswuN {
+        font-family: "Bagel Fat One", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    
+
+ /* 본문내용 -----------------------------------------------------------------------------------------------------------------*/
+ 
+
+    .layoutud {padding-top: 120px; padding-bottom: 50px; font-size: 20px; color:#2e251d;}
+
+    .layoutud form {background-color:#e0d1bda8;
+        padding: 20px;
+        border: 3px solid #e0d1bd;
+        border-radius: 20px;}
+
+    .layoutud h2 {font-family: "Bagel Fat One", system-ui;
+        font-weight: 400;
+        font-style: normal; font-size: 45px;}
+
+
+    #popupLink {color:bisque;
+        background-color: #4f3f31;
+        border-color: #4f3f31;}
+
+        #popupLink:hover {color:#e2c5a1;
+            background-color: #44362b;
+            border-color: #44362b;}
+
+
+    #exampleModal {background-color: #463d313a;
+        --bs-modal-header-border-color: none;
+        --bs-modal-footer-border-color: none;}
+
+ /* 모달 배경색 변경 */
+ .modal-content {
+    background-color: #ecdecb; 
+    color: #333333; 
+  }
+
+  /* 버튼 색상 변경 */
+  .btn-secondary {
+    color:bisque;
+        background-color: #4f3f31;
+        border-color: #4f3f31;
+  }
+
+  .btn-secondary:hover {
+    color:#e2c5a1;
+            background-color: #44362b;
+            border-color: #44362b;
+  }
+
+  /* 닫기 버튼 색상 변경 */
+  .btn-close {
+    background-color: transparent;
+    border: none;
+  }
+  .btn-close:hover {
+    filter: brightness(0.8); /* 닫기 버튼 호버 효과 */
+  }
+
+
+  
+
+
+   .nav-link:hover, 
+   .nav-link.active {color:#2e251d !important;}
+   
+
+/* top button 꾸밈 -----------------------------------------------------*/
+    /* 크기 설정 */
+    .top-button {background-color: #ecdecb;
+        color: black;
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        aspect-ratio: 1;
+        }
+
+    /* 색깔 설정 - 반응형 */
+    .top-button:hover {background-color: #e0d1bd;
+        color: black;}
+
+    .top-button:active {background-color: #e0d1bd !important;
+        color: black !important;}
+
+
+
+/* 최하단 안내구역 --------------------------------------------------*/
+    /* 배경 영역 */
+    .page-under {background-color: #4f3f31;
+        width: 100vw;
+        position: relative;
+        box-sizing: border-box;
+        }
+
+    /* 글씨 크기 font-weight: bold; */
+    .page-under {font-size: small;
+        color:bisque; 
+        }   
+
+    /* 링크 바로가기 서식꾸밈 */
+    .under-link{color: bisque;
+        text-decoration: none;}
+    
+    .under-link:hover{color:#ffe4c4b4;}
+
+    footer{margin-top: auto; position:relative;}
+    
+
+
+    /*사진첩 css-------------------------------------------------------------------------------*/
+
+    .cardc1 .btn-primary {
+        color:bisque;
+            background-color: #4f3f31;
+            border-color: #4f3f31;
+      }
+    
+      .cardc1 .btn-primary:hover {
+        color:#e2c5a1;
+                background-color: #44362b;
+                border-color: #44362b;
+      }
+    
+      img {width: 100%; aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center;}
+
+
+      .cardc1 .card{gap: 25px;    
+        padding: 10px;
+        background-color: #ffffffbd;
+        width: 300px;
+        height: 500px;
+        overflow: hidden;
+        }
+        
+
+      .cardc1 .card:hover { transform: scale(1.05);
+        box-shadow: 0 6px 10px #00000026;
+        }
+
+        .cardc1 .card-title {font-weight: bold !important; font-size: 24px !important;}
+
+        .cardc1 {border: 4px dashed #4f3f31; 
+            border-radius: 20px;
+            padding: 20px; background-color: #f7f1e9;}
+
+
+            .cardc1 .activebtn {
+                color:#e2c5a1;
+                background-color: #44362b;
+                border-color: #44362b; 
+              }
+
+            .btn-toolbar {transform: translateY(15px);}
+
+
+            #modal1 {background-color: #463d313a;
+                --bs-modal-header-border-color:  #e2c5a196;
+                --bs-modal-footer-border-color: none;}
+
+            #modal1Label {font-size: 28px; font-weight: bold;}
+
+             .custom-modal-dialog {max-width: 50% !important;}
+
+             .custom-modal-dialog .modal-body {font-size: 25px; word-break: keep-all;}

@@ -1,0 +1,24 @@
+
+
+
+/* 본문 글씨체 학교안심 우주 */
+body {
+    font-family: "IBM Plex Sans KR", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+
+  .indexcat {
+    size: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .indexcat:hover {transform: translate(-50%, -50%) scale(1.1) rotate(3deg);
+    cursor: pointer;}
+
+
+    .page_under {height: 190px;}

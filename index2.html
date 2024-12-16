@@ -1,0 +1,580 @@
+<!--캐슈넛 페이지-->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>슈냥이들</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="index2.css" />
+    
+    <!--구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=IBM+Plex+Sans+KR&family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+    <!--아이콘 스타일시트-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+      <!--상단 아이콘-->
+      <link rel="icon" href="images/logo1.png?v=1" sizes="48x48" type="image/png">
+
+  </head>
+  
+  <!---------------------------헤드바디 구분선-------------------------->
+
+  <body style="background-color: #4f3f31;">
+    <!-- 네비게이션 바 -->
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #ecdecb;">
+      <div class="container">
+        
+        <!-- 로고 -->
+        <a class="navbar-brand d-flex justify-content-start order-1 order-lg-0" href="main.html">
+          슈냥이들
+        </a>
+
+        <!-- 토글 버튼 (작은 화면에서만 표시) -->
+        <button class="navbar-toggler ms-auto order-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 큰 화면일 때 보일 네비게이션 바 -->
+        <div class="collapse navbar-collapse d-none d-lg-block" id="nbBig">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">프로필</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link activenb" aria-current="page" href="index2.html">캐슈넛</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pict.html">사진게시판</a>
+            </li>
+            <li class="nav-item" style="position: relative;">
+             <!--data-bs-toggle은 dropdown 동작 정의하는 속성이고(꼭 ="dropdown" 이어야함), aria-labelledby는 드롭다운버튼이랑 저거아래거랑 연결해주는거라서 id랑 일치해야함!! 드롭다운 엄한데서 열리지 않게 하려면 position: relative; 꼭!!-->
+              <a class="nav-link dropdown-toggle" href="#" id="nbDrop" data-bs-toggle="dropdown" role="button">그리고...</a>
+              <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="nbDrop">
+                <li><a class="dropdown-item" href="index4.html">Thanks to...</a></li>
+                <li><a class="dropdown-item" href="update.html">건의사항</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- 검색 폼 -->
+          <form class="d-flex ms-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark nbSearch" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 사이드바 메뉴 (작은 화면에서만 표시) -->
+    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="sidebar" aria-labelledby="sb-open">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sb-open" style="color:#4e4841;"><b>슈냥이 사이드바</b></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" style="color:#fff5e9;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">프로필</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index2.html" >캐슈넛</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pict.html">사진게시판</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="sbDrop" data-bs-toggle="dropdown" role="button">그리고...</a>
+            <ul class="dropdown-menu" aria-labelledby="sbDrop">
+              <li><a class="dropdown-item" href="index4.html">Thanks to...</a></li>
+              <li><a class="dropdown-item" href="update.html">건의사항</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- 검색 폼 -->
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-dark nbSearch" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <!--네비게이션 바 종료-->
+
+    <!--새로운 네비게이션 바 시작-->
+    <nav class="navbar fixed-top navbar-expand nbcatswuN" id="nbcatswuN" style="padding-top: 71px; height: 30px; padding-bottom: 15px; border-bottom: 1px solid black; background-color: white; z-index: 1000;">
+      <div class="container d-flex flex-row justify-content-start">
+
+        
+          <ul class="navbar-nav me-1 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link fs-5 nbCat" href="#" style="color: #2e251d;">캐슈넛 &nbsp;|</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#csnA" style="color: #2e251dae;">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#csnB" style="color: #2e251dae;">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#csnC" style="color: #2e251dae;">Notice</a>
+            </li>
+          </ul>
+ 
+      </div>
+    </nav>
+
+
+<!--스크롤반응 위한 div(본문시작)----------------------------------------------------------------------------------------------------------->
+
+
+    <div class="m-0 p-0 mb-0"  data-bs-spy="scroll" data-bs-target="#nbcatswuN" style="background-color: white; height: auto; min-height: 100%; padding-bottom: 190px;">
+
+    <!--첫 번째 섹션-->
+    <section id="csnA" style="color:#45392e; background-color: #ecdecb5b;">
+      <!--그리드 시스템-->
+      <div class="container pt-4">
+        <div class="row mb-0">
+          <div class="col-lg-6 mx-auto justify-content-start">
+            <div class="csnAb">
+            <div class="csnAa">About<br>CatSwuNut</div>
+            <div class="csnAc">
+            서울여자대학교 교내 고양이 공생 동아리 &quot;캐슈넛&quot;을 소개합니다!
+            <br>
+            <br>
+            <br>
+            캐슈넛은 2017년 슈니들과 슈냥이들의 공생을 목적으로 만들어진 동아리로, 슈냥이를 보호하고 관리하는 역할을 합니다. 
+            학교에 자리잡은 길고양이들과 슈니들이 서로 안전하고 행복하게 지낼 수 있도록 언제나 많은 노력을 하고 있어요.
+            </div>
+            <div class="csnAsu">
+              <div class="d-flex justify-content-evenly csnAss">
+                <a href="https://www.instagram.com/cat_swu_nut/" target="_blank" class="btn btn-danger rounded-pill btn-lg px-4 instab"><i class="bi bi-instagram"></i></a> 
+                <a href="http://pf.kakao.com/_lDjTj" target="_blank" class="btn btn-warning rounded-pill btn-lg px-4">
+                  <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/100/external-kakaotalk-or-katalk-is-a-free-mobile-instant-messaging-application-for-smartphones-logo-bold-tal-revivo.png" alt="카카오톡"/>
+                </a>
+                <a href="https://youtu.be/pZFNOkAdx3w?si=1UEZn5Xg0UbuCcEB" target="_blank" class="btn btn-danger rounded-pill btn-lg" style="padding-left: 26px !important; padding-right: 26px !important;"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div> 
+          </div></div>
+          <div class="col-lg-5 me-auto justify-content-end">
+            <iframe src="https://www.instagram.com/cat_swu_nut/embed" 
+              frameborder="6" scrolling="no" 
+            allowtransparency="true" class="csnEb">
+            </iframe>
+            <!--작은화면 SNS 연결-->
+            <div class="csnAsb">
+              <div class="d-flex justify-content-evenly csnAss mb-5 mt-3">
+                  <a href="https://www.instagram.com/cat_swu_nut/" target="_blank" class="btn btn-primary rounded-pill btn-lg instab" ><i class="bi bi-instagram"></i></a>
+                  <a href="http://pf.kakao.com/_lDjTj" target="_blank" class="btn btn-warning rounded-pill btn-lg px-4">
+                    <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/100/external-kakaotalk-or-katalk-is-a-free-mobile-instant-messaging-application-for-smartphones-logo-bold-tal-revivo.png" alt="카카오톡"/>
+                  </a>
+                  <a href="https://youtu.be/pZFNOkAdx3w?si=1UEZn5Xg0UbuCcEB" target="_blank" class="btn btn-danger rounded-pill btn-lg"  style="padding-left: 26px !important; padding-right: 26px !important;"><i class="bi bi-youtube"></i></a>
+
+                
+              </div>
+            </div> 
+            <!--작은화면 sns 연결 종료-->
+          </div>
+        </div><!--row종료-->
+
+      </div>
+      <!--그리드 시스템 종료-->
+
+
+    </section>
+    <!--첫 섹션 종료-->
+      
+    <!--꾸밈선발바닥------------->
+    <div class="container"><div class="row"><div class="col-lg-1 justify-content-start mx-0">
+      <img src="images/catpaww.png" class="catpaww1">
+      <img src="images/catpaww.png" class="catpaww2">
+      <img src="images/catpaww.png" class="catpaww3">
+      <img src="images/catpaww.png" class="catpaww4">
+    </div></div></div>
+    
+    <!--두 번째 섹션-->
+    <section id="csnB" style="color:#2e251d; background-color:#f9e4d732;">
+      <!--그리드 시스템-->
+      <div class="container pt-4 pb-3">
+        <div class="row mb-0">
+          <div class="col-lg-6 mx-auto">
+            <div class="csnBcs">
+            <!--캐러셀-->
+            <div id="swipe" class="carousel slide ">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#swipe" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#swipe" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#swipe" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#swipe" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#swipe" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>
+              <!--캐러셀 내부구성----->
+              <div class="carousel-inner">
+                <!--1번 화면-->
+                <div class="carousel-item active">
+                  <img src="images/catincage.png" class="d-block w-100" alt="중성화 하러 병원에 간 고양이 사진">
+                  <!--설명-->
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>중성화 사업</h5>
+                    <p>캐슈넛은 정기적으로 교내 고양이 중성화 사업을 진행하고 있어요.<br> 
+                      중성화 수술의 진행 과정과 관련 영수증은 전부 캐슈넛 공식 인스타그램에 업로드된답니다. </p>
+                  </div>
+                  <!--설명끝-->
+                  
+                </div>
+                <!--2번 화면-->
+                <div class="carousel-item">
+                  <img src="images/dangoname.png" class="d-block w-100" alt="캐슈넛 부스에서 고양이 당고의 이름을 정하는 공모전 사진">
+                  <!--설명-->
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>캐슈넛 부스(1)</h5>
+                    <p>캐슈넛 부스에서는 다양한 활동을 해요.<br>
+                      이 사진은 서랑제 때 진행한 당당한 고양이 '당고'의 이름을 정하는 투표 사진이에요.
+                    </p>
+                  </div>
+                  <!--설명끝-->
+                </div>
+                <!--3번 화면-->
+                <div class="carousel-item">
+                  <img src="images/sellcat.png" class="d-block w-100" alt="캐슈넛 부스에서 후원 굿즈를 판매하는 사진">
+                  <!--설명-->
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>캐슈넛 부스(2)</h5>
+                    <p>캐슈넛 부스에서 후원 굿즈를 판매하는 사진이에요.<br>
+                      후원 굿즈의 수익금은 전부 중성화 사업과 슈냥이들의 병원비 등으로 쓰여요.
+                    </p>
+                  </div>
+                  <!--설명끝-->
+                  
+                </div>
+                <!--4번 화면-->
+                <div class="carousel-item">
+                  <img src="images/romi2.png" alt="보호소에서 지내는 로미의 사진" style=" width: 100%;">
+                  <!--설명-->
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>유기묘보호소 봉사</h5>
+                    <p>캐슈넛은 따뜻한엄마고양이협회 입양 센터(@ddagomom_official)에서 정기 봉사를 해요.<br>
+                      캐슈넛이 구조했던 후지마비 고양이 &quot;로미&quot;도 현재 센터에서 생활하고 있어요.
+                    </p>
+                  </div>
+                  <!--설명끝-->
+                  
+                </div>
+                <!--5번 화면-->
+                <div class="carousel-item">
+                <img src="images/catsnack.png" alt="고양이 급식소 사진" style=" width: 100%;">
+                <!--설명-->
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>급식소 설치와 배식</h5>
+                  <p>캐슈넛이 2020년 새로 교체해준 튼튼한 급식소 사진이에요.<br>
+                    아이들의 밥은 캐슈넛이 늘 챙겨주고 있으니 간식은 No!
+                  </p>
+                </div>
+                <!--설명끝-->
+                </div>
+
+              </div>
+              <!--캐러셀 내부구성 끝----->
+              <!--좌우넘김버튼-->
+              <button class="carousel-control-prev" type="button" data-bs-target="#swipe" data-bs-slide="prev">
+                <i class="bi bi-arrow-left"></i> 
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#swipe" data-bs-slide="next">
+                <i class="bi bi-arrow-right"></i> 
+              </button>
+              <!--좌우넘김버튼 끝-->
+            </div>
+            <!--캐러셀 끝-->
+          </div>
+
+          </div>
+          <div class="col-lg-5 me-auto justify-content-start">
+            <div class="csnBa">
+             <div class="csnBb">Activities</div>
+              <div class="csnBc">
+              지금까지 캐슈넛은 주로 어떤 활동들을 진행했을까요?
+              <br>
+              <br>
+              <br>
+              <!--
+              하고 있는 주요 활동 (급식소 배식, TNR, 치료, 굿즈 제작 및 판매, 교내 캠페인, 유기묘보호소 봉사활동 등) 
+              언급하고SNS관리, 카드뉴스 제작과 게시, 공지작성, 홍보물 제작 / 디자인팀: 굿즈제작발주 /
+               캠페인팀: 고양이공생규칙관련 캠패인기획진행 /
+               운영팀: 회계업무, 후원금관리, 설문폼관리, 비품 구매 및 조사-->
+
+              캐슈넛은 정말 많은 활동을 해왔어요. 급식소 배식, 주기적인 유기묘보호소 봉사활동 등의 활동을 꾸준히 진행했고 
+              교내 길고양이 중성화 사업이나 아픈 슈냥이의 치료와 관리를 하며 건강관리에도 힘쓰고 있어요.
+              <br><br>
+              슈니와 슈냥이의 공생이 목적인 만큼 슈냥이 뿐만 아니라 슈니들을 위한 활동도 하고 있어요. 
+              캐슈넛 공식 인스타그램에는 고양이와 관련된 여러 카드뉴스, 슈니들에게 전하는 공지사항과 그 외에도 여러 게시물이 올라오고 있답니다.
+              가끔 열리는 캐슈넛 부스에서는 후원 굿즈를 판매하거나 새로운 슈냥이의 이름 투표를 하기도 해요. 
+              <br><br>
+              슈냥이와 슈니 모두를 위해 노력하는 캐슈넛을 앞으로도 응원해주세요!
+              <br>
+              </div>
+              </div> 
+              <!--작은화면 캐러셀-->
+              <div class="csnBcsu">
+                <!--캐러셀-->
+                <div id="swipe2" class="carousel slide ">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#swipe2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#swipe2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#swipe2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#swipe2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#swipe2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  </div>
+                  <!--캐러셀 내부구성----->
+                  <div class="carousel-inner">
+                    <!--1번 화면-->
+                    <div class="carousel-item active">
+                      <img src="images/catincage.png" class="d-block w-100" alt="중성화 하러 병원에 간 고양이 사진">
+                      <!--설명-->
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>중성화 사업</h5>
+                        <p>캐슈넛은 정기적으로 교내 고양이 중성화 사업을 진행하고 있어요.<br> 
+                          중성화 수술의 진행 과정과 관련 영수증은 전부 캐슈넛 공식 인스타그램에 업로드된답니다. </p>
+                      </div>
+                      <!--설명끝-->
+                      
+                    </div>
+                    <!--2번 화면-->
+                    <div class="carousel-item">
+                      <img src="images/dangoname.png" class="d-block w-100" alt="캐슈넛 부스에서 고양이 당고의 이름을 정하는 공모전 사진">
+                      <!--설명-->
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>캐슈넛 부스(1)</h5>
+                        <p>캐슈넛 부스에서는 다양한 활동을 해요.<br>
+                          이 사진은 서랑제 때 진행한 당당한 고양이 '당고'의 이름을 정하는 투표 사진이에요.
+                        </p>
+                      </div>
+                      <!--설명끝-->
+                    </div>
+                    <!--3번 화면-->
+                    <div class="carousel-item">
+                      <img src="images/sellcat.png" class="d-block w-100" alt="캐슈넛 부스에서 후원 굿즈를 판매하는 사진">
+                      <!--설명-->
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>캐슈넛 부스(2)</h5>
+                        <p>캐슈넛 부스에서 후원 굿즈를 판매하는 사진이에요.<br>
+                          후원 굿즈의 수익금은 전부 중성화 사업과 슈냥이들의 병원비 등으로 쓰여요.
+                        </p>
+                      </div>
+                      <!--설명끝-->
+                      
+                    </div>
+                    <!--4번 화면-->
+                    <div class="carousel-item">
+                      <img src="images/romi2.png" alt="보호소에서 지내는 로미의 사진" style=" width: 100%;">
+                      <!--설명-->
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>유기묘보호소 봉사</h5>
+                        <p>캐슈넛은 따뜻한엄마고양이협회 입양 센터(@ddagomom_official)에서 정기 봉사를 해요.<br>
+                          캐슈넛이 구조했던 후지마비 고양이 &quot;로미&quot;도 현재 센터에서 생활하고 있어요.
+                        </p>
+                      </div>
+                      <!--설명끝-->
+                      
+                    </div>
+                    <!--5번 화면-->
+                    <div class="carousel-item">
+                    <img src="images/catsnack.png" alt="고양이 급식소 사진" style=" width: 100%;">
+                    <!--설명-->
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>급식소 설치와 배식</h5>
+                      <p>캐슈넛이 2020년 새로 교체해준 튼튼한 급식소 사진이에요.<br>
+                        아이들의 밥은 캐슈넛이 늘 챙겨주고 있으니 간식은 No!
+                      </p>
+                    </div>
+                    <!--설명끝-->
+                    </div>
+    
+                  </div>
+                  <!--캐러셀 내부구성 끝----->
+                  <!--좌우넘김버튼-->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#swipe2" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left"></i> 
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#swipe2" data-bs-slide="next">
+                    <i class="bi bi-arrow-right"></i> 
+                  </button>
+                  <!--좌우넘김버튼 끝-->
+                </div>
+                <!--캐러셀 끝-->
+              </div>
+          </div>
+          
+        </div><!--row종료-->
+
+      </div>
+      <!--그리드 시스템 종료-->
+    </section>
+
+    <!--꾸밈선 발바닥--------------->
+    <div class="container paw2"><div class="row"><div class="col-lg-1 justify-content-start">
+      <img src="images/catpaww.png" class="catpaww1">
+      <img src="images/catpaww.png" class="catpaww2">
+      <img src="images/catpaww.png" class="catpaww3">
+      <img src="images/catpaww.png" class="catpaww4">
+    </div></div></div>
+
+
+    <!--세번째 섹션-->
+    <section id="csnC" style="color:#45392e; background-color: #ecdecb5b;">
+      <!--그리드 시스템-->
+      <div class="container pt-4">
+        <div class="row mb-0">
+          <div class="col-lg-6 mx-auto justify-content-start">
+            <div class="csnCa">
+            <div class="csnCb">Notice</div>
+            <div class="csnCc">
+            우리가 함께하기 위해 지켜야 할 규칙들을 알아봐요.
+            <br>
+            <br>
+            <br>
+            캐슈넛은 슈니와 슈냥이의 행복하고 안전한 공생을 위해 몇가지 규칙을 정했어요.
+            조금만 주의를 기울이면 쉽게 지킬 수 있는 규칙들이에요.
+            앞으로도 오래오래 함께 지낼 수 있도록 같이 지켜주세요!
+
+          </div>
+          </div></div>
+          <div class="col-lg-5 me-auto justify-content-end">
+            <div class="csnCac">
+              <!--아코디언-->
+              <div class="accordion" id="acco">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      규칙 1
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#acco">
+                    <div class="accordion-body">
+                      슈냥이에게 간식을 주지 마세요. 간식은 사람에 대한 슈냥이들의 경계심을 낮출 수 있어 학대와 같은 위험 발생 가능성을 증가시켜요.
+                      또한 간식은 칼로리와 염분이 높아서 슈냥이에게 방광염이나 비만같은 병을 유발시키는 원인이 될 수 있답니다.
+                      만약 누군가 슈냥이에게 간식을 주고 있다면 말려주세요! 사료는 주기적으로 충분히 급여되고 있습니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      규칙 2
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#acco">
+                    <div class="accordion-body">
+                    찰칵찰칵! 고양이 사진을 찍는 당신! 앞으로는 슈냥이 사진을 찍을 때에는 무음 카메라를 사용해주세요. 
+                    찰칵 소리가 나면 슈냥이가 깜짝 놀랄 수 있어요. 고양이는 개보다 청력이 뛰어나 소리에 민감해 셔터 소리에 스트레스를 받을 수 있어요.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      규칙 3
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#acco">
+                    <div class="accordion-body">
+                    슈냥이가 자고 있다면 눈으로만 지켜봐주세요. 자고 있는 슈냥이를 만지면 슈냥이가 놀라서 스트레스를 받아요. 
+                    아무리 잠자는 슈냥이가 귀여워도 쓰다듬지 않기로 약속!
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                      규칙 4
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#acco">
+                    <div class="accordion-body">
+                    슈냥이에게 문제가 생긴 것 같다면 캐슈넛 인스타그램으로 DM을 보내거나, 캐슈넛 카카오톡 플러스 친구로 슈냥이의 상태와 사진을 전달해주세요.
+                    이 두가지 경로로 직접적인 연락을 해주면 가장 빠른 확인이 가능해요.  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--아코디언 끝-->
+            </div>
+          </div>
+        </div><!--row종료-->
+
+      </div>
+      <!--그리드 시스템 종료-->
+
+
+    </section>
+    
+
+        
+       
+      
+      <!--scrollspy div내부 종료--------------->
+    </div>
+    
+    <!--top 버튼---------------------------------------->
+    <a href="#">
+    <button class="btn btn-dark top-button position-fixed" style="bottom: 6%; right: 4%;" type="button">top</button>
+    </a>
+
+    <!--하단 안내구역------------------------------------>
+    <footer class="page-under p-2 pt-4 m-0 mb-0">
+        깃허브, 부트스트랩, 사이트 이용안내, 건의사항
+        <p>
+        <div class="row link-bottom">
+            <div class="col-12 d-flex flex-column mx-0">
+                <!--내부 그리드-->
+                <div class="row">
+                    <div class="fw-bold" style="width:170px;">
+                        캐슈넛 공식 인스타그램 <i class="bi bi-instagram"></i>
+                    </div>
+                    <div class="col-auto" style="color: #ffe4c44e;">
+                        | &nbsp; 
+                        <a href="https://www.instagram.com/cat_swu_nut/" target="_blank" class="under-link">
+                            https://www.instagram.com/cat_swu_nut/
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fw-bold" style="width:170px;">
+                        서울여자대학교 홈페이지
+                    </div>
+                    <div class="col-auto" style="color: #ffe4c44e;"> 
+                        | &nbsp; 
+                        <a href="https://www.swu.ac.kr/" target="_blank" class="under-link">
+                          https://www.swu.ac.kr/
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fw-bold" style="width:170px;">
+                        사진 출처 바로가기
+                    </div>
+                    <div class="col-auto" style="color: #ffe4c44e;">
+                        | &nbsp; 
+                        <a href="index4.html" target="_blank" class="under-link">
+                            Thanks to... 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </p>
+        <p> 
+          <i class="bi bi-c-circle"></i>2023110422 홍유나 2024-2학기 웹페이지저작기초 화3-4 기말 과제 사이트 슈냥이들
+        </p>
+        
+    </footer>
+    <!--하단 안내구역 종료-->
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+    </html>
